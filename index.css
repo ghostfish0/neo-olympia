@@ -1,49 +1,113 @@
 :root {
+  --border-width: 2px;
+}
 
+* {
+  box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
-	background-color: #000000;
+	background-color: var(--background-color);
+	display: flex;
+	flex-direction: column;
 	margin: 0;
-	font-family: 'Helvetica';
+  padding: 0;
+  overflow: hidden;
+  
+  font-family: -apple-system, BlinkMacSystemFont, Montserrat, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: var(--foreground-color);
 }
 
-.side {
-	height: 100vh;
-	width: 100%;
-
-	display: grid;
-	place-items: center;
-
-	overflow: hidden;
-	position: absolute;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-.side .question {
-	color: white;
-/*	font-family: monospace;*/
-	font-size: 8vw;
-	margin: 25vh 0;
-	width: 80vw;
+nav,
+main,
+#statusbar {
+  display: flex;
+  width: 100%;
+  border: var(--border-width) solid var(--foreground-color);
+  border-bottom: none;
 }
 
-#top-side {
-	background-color: black;
-	z-index: 2;
+nav {
+  flex-basis: 8%;
 }
 
-#top-side .question{
-	color: white;
+nav > .nav-section {
+  padding: 1rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-left: var(--border-width) solid var(--foreground-color);
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
 }
 
-#bot-side {
-	background-color: blue;
+#nav-logo {
+  flex-basis: 12%;
+  border-left: none;
 }
 
-#bot-side .question {
-	color: white;
+#nav-match {
+  flex-basis: 15%;
+}
+
+#nav-timer {
+  flex-basis: 5%;
+}
+
+#nav-round {
+  flex-grow: 1;
+}
+
+main {
+  flex-basis: 70%;
+}
+
+#main-playersboard {
+  flex-basis: 12%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#main-playersboard > .playercard {
+  flex-grow: 1;
+  padding: 1rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 0.15rem;
+
+  border-bottom: var(--border-width) solid var(--foreground-color);
+
+  font-weight: 600;
+}
+
+#main-playersboard > .playercard > .player-score {
+  font-size: 3em;
+}
+
+#main-playersboard > #player-4 {
+  border-bottom: none;
+}
+
+#main-content {
+  flex-grow: 1;
+  border-left: var(--border-width) solid var(--foreground-color);
+}
+
+#statusbar {
+  flex-grow: 1;
+  border: var(--border-width) solid var(--foreground-color);
 }

@@ -2,25 +2,67 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./index.css">
-	<title>Neo Olymtia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>Olymtia</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+
+    <link href="./themes/che-dau-xanh.css" rel="stylesheet" type="text/css">
+    <link href="./index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div>
+	<nav>
+		<div id="nav-logo" class="nav-section">
+			<img id="nav-logo-img" src="./assets/logo-tr-16x16.png">
+			<div id="nav-logo-text">OLYMTIA</div>
+		</div>
+		<div id="nav-match" class="nav-section">
+			TRẬN TUẦN _ QUÝ _
+		</div>
+		<div id="nav-round" class="nav-section">
+			VƯỢT CHƯỚNG NGẠI VẬT
+		</div>
+		<div id="nav-timer" class="nav-section">
+			__:__:__
+		</div>
+	</nav>
+
+	<main>
+		<div id="main-playersboard" class="main-section">
+			<div id="player-1" class="playercard player-selected">
+				<div id="player-1-name" class="playername">RẠNG ĐÔNG</div>
+				<div id="player-1-score" class="player-score">999</div>
+			</div>
+			<div id="player-2" class="playercard">
+				<div id="player-2-name" class="playername">ĐÀY ẢI</div>
+				<div id="player-2-score" class="player-score">999</div>
+			</div>
+			<div id="player-3" class="playercard">
+				<div id="player-3-name" class="playername">HỔ PHÁCH</div>
+				<div id="player-3-score" class="player-score">999</div>
+			</div>
+			<div id="player-4" class="playercard">
+				<div id="player-4-name" class="playername">TRÀ OẢI HƯƠNG</div>
+				<div id="player-4-score" class="player-score">999</div>
+			</div>
+		</div>
+		<div id="main-content" class="main-section"></div>
+	</main>
+
+	<div id="statusbar">
+		<div id="statusbar-progress"></div>
+		<div id="statusbar-answer"></div>
+	</div>
+
+	<div id="configmenu">
 		
 	</div>
 
-	<div id="top-side" class="side">
-		<h3 class="question">
-			Câu hỏi câu hỏi câu hỏi câu hỏi câu hỏi.
-		</h3>
-	</div>
-	<div id="bot-side" class="side">
-		<h3 class="question">
-			Câu hỏi câu hỏi câu hỏi câu hỏi câu hỏi.
-		</h3>
-	</div>
-
-	<script src="./index.js"></script>
+<!-- 	<script src="./scripts/global.js"></script>
+	<script src="./scripts/config.js"></script>
+	<script src="./scripts/index.js"></script> -->
 </body>
+</html>
